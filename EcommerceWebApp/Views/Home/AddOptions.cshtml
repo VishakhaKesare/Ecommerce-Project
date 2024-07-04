@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "AddOptions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="container-fluid">
+                    <div class="float-end">
+
+                        <div class="container">
+                            <div class="row align-items-center mb-3">
+                                <!-- Heading -->
+                                <div class="col">
+                                    <h1>Options</h1>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="col-auto">
+                                    <!-- Save button -->
+                                    <button type="submit" @*form="form-category"*@ class="btn btn-primary ms-2">
+                                        <i class="fas fa-save me-1"></i> Save
+                                    </button>
+                                    <!-- Back button -->
+                                    <a href="@Url.Action("Option")" class="btn btn-outline-secondary">
+                                        <i class="fas fa-arrow-left me-1"></i> Go Back
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Breadcrumbs -->
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index")">Home</a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("Option")">Options</a></li>
+                            </ol>
+                        </div>
+
+
+                        <!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header"><i class="fas fa-pencil-alt"></i> Add Option</div>
+                        <div class="card-body">
+                            <form id="form-option" action="https://demo.opencart.com/admin/index.php?route=catalog/option|save&amp;user_token=b4d362a6e4ab381dc94840dd102693e3" method="post" data-oc-toggle="ajax">
+                                <fieldset>
+                                    <legend>Option</legend>
+                                    <div class="row mb-3 required">
+                                        <label class="col-sm-2 col-form-label">Option Name</label>
+                                        <div class="col-sm-10">
+                                            <div class="input-group">
+                                                <div class="input-group-text"><img src="~/Content/admin/img/language.png" title="English"></div>
+                                                <input type="text" name="option_description[1][name]" value="" placeholder="Option Name" id="input-name-1" class="form-control">
+                                            </div>
+                                            <div id="error-name-1" class="invalid-feedback"></div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="input-type" class="col-sm-2 col-form-label">Type</label>
+                                        <div class="col-sm-10">
+                                            <select name="type" id="input-type" class="form-select">
+                                                <optgroup label="Choose">
+                                                    <option value="select">Select</option>
+                                                    <option value="radio">Radio</option>
+                                                    <option value="checkbox">Checkbox</option>
+                                                </optgroup>
+                                                <optgroup label="Input">
+                                                    <option value="text">Text</option>
+                                                    <option value="textarea">Textarea</option>
+                                                </optgroup>
+                                                <optgroup label="File">
+                                                    <option value="file">File</option>
+                                                </optgroup>
+                                                <optgroup label="Date">
+                                                    <option value="date">Date</option>
+                                                    <option value="time">Time</option>
+                                                    <option value="datetime">Date &amp; Time</option>
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <label for="input-sort-order" class="col-sm-2 col-form-label">Sort Order</label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="sort_order" value="" placeholder="Sort Order" id="input-sort-order" class="form-control">
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Option Values</legend>
+                                    <table id="option-value" class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <td class="text-start required">Option Value Name</td>
+                                                <td class="text-center">Image</td>
+                                                <td class="text-end">Sort Order</td>
+                                                <td></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                                <td class="text-end"><button type="button" onclick="addOptionValue();" data-bs-toggle="tooltip" title="" class="btn btn-primary" data-bs-original-title="Add Option Value" aria-label="Add Option Value"><i class="fas fa-plus-circle"></i></button></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </fieldset>
+                                <input type="hidden" name="option_id" value="0" id="input-option-id">
+                            </form>
+                        </div>
+                    </div>
+                 </div>
+               
+        </div>
+    </div>
+</div>
+

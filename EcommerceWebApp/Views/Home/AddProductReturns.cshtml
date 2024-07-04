@@ -1,0 +1,255 @@
+﻿
+@{
+    ViewBag.Title = "AddProductReturns";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="container-fluid">
+                    <div class="float-end">
+
+                        <div class="container">
+                            <div class="row align-items-center mb-3">
+                                <!-- Heading -->
+                                <div class="col">
+                                    <h1>Product Returns</h1>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="col-auto">
+                                    <!-- Save button -->
+                                    <button type="submit" @*form="form-category"*@ class="btn btn-primary ms-2">
+                                        <i class="fas fa-save me-1"></i> Save
+                                    </button>
+                                    <!-- Back button -->
+                                    <a href="@Url.Action("Returns")" class="btn btn-outline-secondary">
+                                        <i class="fas fa-arrow-left me-1"></i> Go Back
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Breadcrumbs -->
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index")">Home</a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("Returns")">Product Returns</a></li>
+                            </ol>
+                        </div>
+
+
+                        <!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header"><i class="fas fa-pencil-alt"></i> Add Product Return</div>
+                        <div class="card-body">
+                            <form id="form-return" action="https://demo.opencart.com/admin/index.php?route=sale/returns|save&amp;user_token=40028cc3e1a2e31550a27df10b7fb0bb" method="post" data-oc-toggle="ajax">
+                                <ul class="nav nav-tabs">
+                                    <li class="nav-item"><a href="#tab-general" data-bs-toggle="tab" class="nav-link active">General</a></li>
+                                    <li class="nav-item"><a href="#tab-history" data-bs-toggle="tab" class="nav-link">History</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="tab-general" class="tab-pane active">
+                                        <fieldset>
+                                            <legend>Order Information</legend>
+                                            <div class="row mb-3 required">
+                                                <label for="input-order-id" class="col-sm-2 col-form-label">Order ID</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="order_id" value="" placeholder="Order ID" id="input-order-id" class="form-control">
+                                                    <div id="error-order-id" class="invalid-feedback"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="input-date-ordered" class="col-sm-2 col-form-label">Order Date</label>
+                                                <div class="col-sm-10 col-md-4">
+                                                    <div class="input-group">
+                                                        <input type="text" name="date_ordered" value="" placeholder="Order Date" id="input-date-ordered" class="form-control date">
+                                                        <div class="input-group-text"><i class="fas fa-calendar"></i></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label class="col-sm-2 col-form-label">Customer</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="customer" value="" placeholder="Customer" id="input-customer" list="list-customer" class="form-control">
+                                                    <datalist id="list-customer"></datalist>
+                                                    <input type="hidden" name="customer_id" value="">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3 required">
+                                                <label for="input-firstname" class="col-sm-2 col-form-label">First Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="firstname" value="" placeholder="First Name" id="input-firstname" class="form-control">
+                                                    <div id="error-firstname" class="invalid-feedback"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3 required">
+                                                <label for="input-lastname" class="col-sm-2 col-form-label">Last Name</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="lastname" value="" placeholder="Last Name" id="input-lastname" class="form-control">
+                                                    <div id="error-lastname" class="invalid-feedback"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3 required">
+                                                <label for="input-email" class="col-sm-2 col-form-label">E-Mail</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="email" value="" placeholder="E-Mail" id="input-email" class="form-control">
+                                                    <div id="error-email" class="invalid-feedback"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3 required">
+                                                <label for="input-telephone" class="col-sm-2 col-form-label">Telephone</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="telephone" value="" placeholder="Telephone" id="input-telephone" class="form-control">
+                                                    <div id="error-telephone" class="invalid-feedback"></div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Product Information &amp; Reason for Return</legend>
+                                            <div class="row mb-3 required">
+                                                <label class="col-sm-2 col-form-label">Product</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="product" value="" placeholder="Product" id="input-product" list="list-product" class="form-control">
+                                                    <datalist id="list-product"></datalist>
+                                                    <input type="hidden" name="product_id" value="" id="input-product-id">
+                                                    <div class="form-text">(Autocomplete)</div>
+                                                    <div id="error-product" class="invalid-feedback"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3 required">
+                                                <label for="input-model" class="col-sm-2 col-form-label">Model</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="model" value="" placeholder="Model" id="input-model" class="form-control">
+                                                    <div id="error-model" class="invalid-feedback"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="input-quantity" class="col-sm-2 col-form-label">Quantity</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" name="quantity" value="" placeholder="Quantity" id="input-quantity" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="input-return-reason" class="col-sm-2 col-form-label">Return Reason</label>
+                                                <div class="col-sm-10">
+                                                    <select name="return_reason_id" id="input-return-reason" class="form-select">
+                                                        <option value="1">Dead On Arrival</option>
+                                                        <option value="4">Faulty, please supply details</option>
+                                                        <option value="3">Order Error</option>
+                                                        <option value="5">Other, please supply details</option>
+                                                        <option value="2">Received Wrong Item</option>
+                                                    </select>
+                                                    <div id="error-return-reason" class="invalid-feedback"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="input-opened" class="col-sm-2 col-form-label">Opened</label>
+                                                <div class="col-sm-10">
+                                                    <select name="opened" id="input-opened" class="form-select">
+                                                        <option value="1">Opened</option>
+                                                        <option value="0" selected="">Unopened</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="input-comment" class="col-sm-2 col-form-label">Comment</label>
+                                                <div class="col-sm-10">
+<textarea name="comment" rows="5" placeholder="Comment" id="input-comment" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="input-return-action" class="col-sm-2 col-form-label">Return Action</label>
+                                                <div class="col-sm-10">
+                                                    <select name="return_action_id" id="input-return-action" class="form-select">
+                                                        <option value="0"></option>
+                                                        <option value="2">Credit Issued</option>
+                                                        <option value="1">Refunded</option>
+                                                        <option value="3">Replacement Sent</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="input-return-status" class="col-sm-2 col-form-label">Return Status</label>
+                                                <div class="col-sm-10">
+                                                    <select name="return_status_id" id="input-return-status" class="form-select">
+                                                        <option value="2">Awaiting Products</option>
+                                                        <option value="3">Complete</option>
+                                                        <option value="1">Pending</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                    <div id="tab-history" class="tab-pane">
+                                        <fieldset>
+                                            <legend>History</legend>
+                                            <div id="history">
+                                                <table class="table table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <td class="text-start">Date Added</td>
+                                                            <td class="text-start">Comment</td>
+                                                            <td class="text-start">Status</td>
+                                                            <td class="text-start">Customer Notified</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center" colspan="4">No results!</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div class="row">
+                                                    <div class="col-sm-6 text-start"></div>
+                                                    <div class="col-sm-6 text-end">Showing 0 to 0 of 0 (0 Pages)</div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <legend>Add History</legend>
+                                            <div class="row mb-3">
+                                                <label for="input-return-status" class="col-sm-2 col-form-label">Return Status</label>
+                                                <div class="col-sm-10">
+                                                    <select name="return_status_id" id="input-return-status" class="form-select">
+                                                        <option value="2">Awaiting Products</option>
+                                                        <option value="3">Complete</option>
+                                                        <option value="1">Pending</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="input-notify" class="col-sm-2 col-form-label">Notify Customer</label>
+                                                <div class="col-sm-10">
+                                                    <input type="checkbox" name="notify" value="1" id="input-notify" class="form-check-input">
+                                                </div>
+                                            </div>
+                                            <div class="row mb-3">
+                                                <label for="input-history-comment" class="col-sm-2 col-form-label">Comment</label>
+                                                <div class="col-sm-10">
+<textarea name="comment" rows="8" placeholder="Comment" id="input-history-comment" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <button type="button" id="button-history" class="btn btn-primary"><i class="fas fa-plus-circle"></i> Add History</button>
+                                            </div>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="return_id" value="0" id="input-return-id">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                    <!-- /.content-header -->
+                    <!-- Main content  write everythig inside this main content -->
+                    <!-- main content start -->
+
+                </div>
+     </div>
+</div>

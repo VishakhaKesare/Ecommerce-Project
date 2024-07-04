@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Giftvochers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Gift Vouchers</h1>
+                </div><!-- /.col -->
+                <div class="col-md-4">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index")">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Gift Vouchers</li>
+                    </ol>
+                </div><!-- /.col -->
+                <div class="col">
+                    <div class="float-sm right">
+                        <button type="button" id="button-send" data-bs-toggle="tooltip" title="" class="btn btn-warning" data-bs-original-title="Send" aria-label="Send">
+                            <i class="fas fa-envelope"></i>
+                        </button>
+                        <a href="@Url.Action("AddGiftVochers")" data-bs-toggle="tooltip" title="" class="btn btn-primary" data-bs-original-title="Add New" aria-label="Add New">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                        <button type="submit" form="form-subscription-plan" formaction="https://demo.opencart.com/admin/index.php?route=catalog/subscription_plan|delete&amp;user_token=4ca83d273fa34bd95748b6ad76b4193a" data-bs-toggle="tooltip" title="" onclick="return confirm('Are you sure?');" class="btn btn-danger" data-bs-original-title="Delete" aria-label="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div><!-- /.col -->
+
+
+
+
+            </div><!-- /.row -->
+            <div class="row">
+
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title"> <i class="fas fa-list"></i> &nbsp;Gift Vochers Lists</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table class="table table-bordered" id="giftvocherTable">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <input type="checkbox" id="exampleCheck1">
+                                    </th>
+                                    <th>Code </th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Amount</th>
+                                    <th>Theme</th>
+                                    <th>Date Added</th>
+                                    <th>Action</th>
+                                    <th style="width: 40px"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer clearfix">
+                        <ul class="pagination pagination-sm m-0 float-right">
+                            <li class="page-item"><a class="page-link" href="#">«</a></li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">»</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>

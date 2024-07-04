@@ -1,0 +1,142 @@
+﻿     
+
+@{
+    ViewBag.Title = "product";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>product</h2>*@
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Products</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="../dashboard.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Product</li>
+                    </ol>
+                </div><!-- /.col -->
+                <div class="col">
+                    <div class="float-sm-right">
+
+                        <a href="@Url.Action("AddProduct")" data-bs-toggle="tooltip" title="" class="btn btn-primary" data-bs-original-title="Add New" aria-label="Add New"><i class="fas fa-plus"></i></a>
+                        <button type="submit" form="form-subscription-plan"
+                                formaction="https://demo.opencart.com/admin/index.php?route=catalog/subscription_plan|delete&amp;user_token=4ca83d273fa34bd95748b6ad76b4193a" data-bs-toggle="tooltip" title="" onclick="return confirm('Are you sure?');" class="btn btn-danger" data-bs-original-title="Delete" aria-label="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+
+        </div>
+        <!-- /.content-header -->
+        <!-- Main content -->
+        @{
+            string[] product = {
+            "https://demo.opencart.com/image/cache/catalog/demo/htc_touch_hd_1-40x40.jpg",
+            "https://demo.opencart.com/image/cache/catalog/demo/ipod_classic_1-40x40.jpg",
+            "https://demo.opencart.com/image/cache/catalog/demo/hp_1-40x40.jpg"
+        };
+
+            string[] modelNames = { "M101", "M102", "M103" };
+            string[] productNames = { "Mobile", "iPod Classic", "HP LP3065" };
+            decimal[] prices = { 4455.00m, 3500.00m, 500.00m };
+
+
+        }
+
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title"><i class="fas fa-list"></i> &nbsp;Products Lists</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="productTable">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="exampleCheck1">
+                                                </th>
+                                                <th>Image</th>
+                                                <th>Product Name</th>
+                                                <th>Model</th>
+                                                <th>Price</th>
+                                                <th>Quantity</th>
+                                                <th style="width: 40px">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+
+
+                                        @{
+                                            int count = 0;
+                                            foreach (var prod in product)
+                                            {
+                                                count++;
+
+
+                                                <tr>
+                                                    <td><input type="checkbox" id="exampleCheck1"></td>
+                                                    <td><img src="@prod" alt="Product Image" class="img-thumbnail"></td>
+                                                    <td>@productNames[count - 1]</td>
+                                                    <td>@modelNames[count - 1]</td>
+                                                    <td>@prices[count - 1]</td>
+                                                    <td>@count</td>
+                                                    <td><a class="btn btn-primary"><i class="fas fa-edit"></i></a></td>
+                                                </tr>
+                                            }
+                                        }
+
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title"><i class="fas fa-filter"></i> Filter</h3>
+                            </div>
+                            <div class="card-body">
+                                <label>Product Name</label>
+                                <input class="form-control form-control-lg" type="text" placeholder="Product Name">
+                                <br>
+                                <label>Model</label>
+                                <input class="form-control" type="text" placeholder="Model">
+                                <br>
+                                <label>Price</label>
+                                <input class="form-control form-control-sm" type="text" placeholder="Price">
+                                <br>
+                                <label>Quantity</label>
+                                <input class="form-control form-control-sm" type="text" placeholder="Quantity">
+                                <br>
+                                <div class="form-group">
+                                    <label>Status</label>
+                                    <select class="form-control">
+                                        <option>Enable</option>
+                                        <option>Disanable</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.content-header -->
+    </div>
+    <!-- /.content -->
+</div>

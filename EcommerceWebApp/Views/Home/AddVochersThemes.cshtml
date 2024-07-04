@@ -1,0 +1,89 @@
+﻿
+@{
+    ViewBag.Title = "AddVochersThemes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="container-fluid">
+                    <div class="float-end">
+
+                        <div class="container">
+                            <div class="row align-items-center mb-3">
+                                <!-- Heading -->
+                                <div class="col">
+                                    <h1>Vochers Themes</h1>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="col-auto">
+                                    <!-- Save button -->
+                                    <button type="submit" @*form="form-category"*@ class="btn btn-primary ms-2">
+                                        <i class="fas fa-save me-1"></i> Save
+                                    </button>
+                                    <!-- Back button -->
+                                    <a href="@Url.Action("vocherThemes")" class="btn btn-outline-secondary">
+                                        <i class="fas fa-arrow-left me-1"></i> Go Back
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Breadcrumbs -->
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index")">Home</a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("vocherThemes")">Vouchers Themes</a></li>
+                            </ol>
+                        </div>
+
+
+                        <!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header"><i class="fas fa-pencil-alt"></i> Add Voucher Theme</div>
+                        <div class="card-body">
+                            <form id="form-voucher-theme" action="https://demo.opencart.com/admin/index.php?route=sale/voucher_theme|save&amp;user_token=40028cc3e1a2e31550a27df10b7fb0bb" method="post" data-oc-toggle="ajax">
+                                <div class="row mb-3 required">
+                                    <label class="col-sm-2 col-form-label">Voucher Theme Name</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group">
+                                            <div class="input-group-text"><img src="~/Content/admin/img/language.png" title="English"></div>
+                                            <input type="text" name="voucher_theme_description[1][name]" value="" placeholder="Voucher Theme Name" id="input-name-1" class="form-control">
+                                        </div>
+                                        <div id="error-name-1" class="invalid-feedback"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 align-items-center">
+                                    <label for="input-image" class="col-sm-2 col-form-label">Image</label>
+                                    <div class="col-sm-10">
+                                        <div class="card image" style="max-width: 200px; max-height: 300px;">
+                                            <!-- Adjust max-width and max-height as needed -->
+                                            <img src="https://demo.opencart.com/image/cache/no_image-100x100.png" alt="" title="" id="thumb-image" data-oc-placeholder="https://demo.opencart.com/image/cache/no_image-100x100.png" class="card-img-top">
+                                            <input type="hidden" name="image" value="" id="input-image">
+                                            <div class="card-body d-flex justify-content-between align-items-center">
+                                                <!-- Added align-items-center class -->
+                                                <button type="button" data-oc-toggle="image" data-oc-target="#input-image" data-oc-thumb="#thumb-image" class="btn btn-primary btn-sm"><i class="fas fa-pencil-alt"></i> Edit</button>
+                                                <button type="button" data-oc-toggle="clear" data-oc-target="#input-image" data-oc-thumb="#thumb-image" class="btn btn-warning btn-sm"><i class="fas fa-trash-alt"></i> Clear</button>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input type="hidden" name="voucher_theme_id" value="0" id="input-voucher-theme-id">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ </div>
+

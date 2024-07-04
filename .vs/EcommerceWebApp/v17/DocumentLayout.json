@@ -1,0 +1,244 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\c sharp programs\\EcommerceWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\asp project\\NEW_E_COMMERCE_WEB_APPLICATION\\Controllers\\UserLoginController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\views\\userlogin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\views\\userlogin\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\controllers\\userlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\controllers\\userlogincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\views\\home\\customers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\views\\home\\customers.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\views\\home\\returns.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\views\\home\\returns.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\views\\home\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\views\\home\\orders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\views\\home\\product.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\views\\home\\addcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\views\\home\\addcategory.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\views\\home\\categories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\views\\home\\categories.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|F:\\c sharp programs\\EcommerceWebApp\\ecommercewebapp\\models\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7487A5BE-CEDC-4A60-BC7C-EBA10D5BD061}|EcommerceWebApp\\EcommerceWebApp.csproj|solutionrelative:ecommercewebapp\\models\\categories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserLoginController.cs",
+              "DocumentMoniker": "F:\\asp project\\NEW_E_COMMERCE_WEB_APPLICATION\\Controllers\\UserLoginController.cs",
+              "RelativeDocumentMoniker": "..\\..\\asp project\\NEW_E_COMMERCE_WEB_APPLICATION\\Controllers\\UserLoginController.cs",
+              "ToolTip": "F:\\asp project\\NEW_E_COMMERCE_WEB_APPLICATION\\Controllers\\UserLoginController.cs",
+              "RelativeToolTip": "..\\..\\asp project\\NEW_E_COMMERCE_WEB_APPLICATION\\Controllers\\UserLoginController.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAD0AAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-03T18:01:10.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Customers.cshtml",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\Customers.cshtml",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Views\\Home\\Customers.cshtml",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\Customers.cshtml",
+              "RelativeToolTip": "EcommerceWebApp\\Views\\Home\\Customers.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T16:50:17.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Returns.cshtml",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\Returns.cshtml",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Views\\Home\\Returns.cshtml",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\Returns.cshtml",
+              "RelativeToolTip": "EcommerceWebApp\\Views\\Home\\Returns.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T16:39:45.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "orders.cshtml",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\orders.cshtml",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Views\\Home\\orders.cshtml",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\orders.cshtml",
+              "RelativeToolTip": "EcommerceWebApp\\Views\\Home\\orders.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T16:37:21.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "product.cshtml",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\product.cshtml",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Views\\Home\\product.cshtml",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\product.cshtml",
+              "RelativeToolTip": "EcommerceWebApp\\Views\\Home\\product.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAI0AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T12:02:28.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "categories.cshtml",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\categories.cshtml",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Views\\Home\\categories.cshtml",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\categories.cshtml*",
+              "RelativeToolTip": "EcommerceWebApp\\Views\\Home\\categories.cshtml*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH4AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-02T10:48:38.46Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserloginController.cs",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Controllers\\UserloginController.cs",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Controllers\\UserloginController.cs",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Controllers\\UserloginController.cs",
+              "RelativeToolTip": "EcommerceWebApp\\Controllers\\UserloginController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-28T11:55:00.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddCategory.cshtml",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\AddCategory.cshtml",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Views\\Home\\AddCategory.cshtml",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\AddCategory.cshtml",
+              "RelativeToolTip": "EcommerceWebApp\\Views\\Home\\AddCategory.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-14T07:35:30.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Userlogin\\login.cshtml",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Views\\Userlogin\\login.cshtml",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Userlogin\\login.cshtml",
+              "RelativeToolTip": "EcommerceWebApp\\Views\\Userlogin\\login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-12T10:19:11.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Controllers\\HomeController.cs",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "EcommerceWebApp\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAiwH8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T12:24:05.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "categories.cs",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Models\\categories.cs",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Models\\categories.cs",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Models\\categories.cs",
+              "RelativeToolTip": "EcommerceWebApp\\Models\\categories.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T11:58:18.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\App_Start\\RouteConfig.cs",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "EcommerceWebApp\\App_Start\\RouteConfig.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T12:43:51.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "EcommerceWebApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMBAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-06T12:02:57.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EcommerceWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "F:\\c sharp programs\\EcommerceWebApp\\EcommerceWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EcommerceWebApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAADwCAAAAAAAAAAAAwFUCAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-02T06:58:53.772Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

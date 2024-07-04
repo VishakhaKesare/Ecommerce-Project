@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "AddAttributesGroup";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="container-fluid">
+                    <div class="float-end">
+
+                        <div class="container">
+                            <div class="row align-items-center mb-3">
+                                <!-- Heading -->
+                                <div class="col">
+                                    <h1>Attributes Group</h1>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="col-auto">
+                                    <!-- Save button -->
+                                    <button type="submit" @*form="form-category"*@ class="btn btn-primary ms-2">
+                                        <i class="fas fa-save me-1"></i> Save
+                                    </button>
+                                    <!-- Back button -->
+                                    <a href="@Url.Action("attributesGroup")" class="btn btn-outline-secondary">
+                                        <i class="fas fa-arrow-left me-1"></i> Go Back
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Breadcrumbs -->
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index")">Home</a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("attributesGroup")">attributes Group</a></li>
+                            </ol>
+                        </div>
+
+
+                        <!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header"><i class="fas fa-pencil-alt"></i> Add Attribute Group</div>
+                        <div class="card-body">
+                            <form id="form-attribute-group" action="https://demo.opencart.com/admin/index.php?route=catalog/attribute_group|save&amp;user_token=40028cc3e1a2e31550a27df10b7fb0bb" method="post" data-oc-toggle="ajax">
+                                <div class="row mb-3 required">
+                                    <label class="col-sm-2 col-form-label">Attribute Group Name</label>
+                                    <div class="col-sm-10">
+                                        <div class="input-group">
+                                            <div class="input-group-text"><img src="~/Content/admin/img/language.png" title="English"></div>
+                                            <input type="text" name="attribute_group_description[1][name]" value="" placeholder="Attribute Group Name" id="input-name-1" class="form-control">
+                                        </div>
+                                        <div id="error-name-1" class="invalid-feedback"></div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="input-sort-order" class="col-sm-2 col-form-label">Sort Order</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" name="sort_order" value="" placeholder="Sort Order" id="input-sort-order" class="form-control">
+                                    </div>
+                                </div>
+                                <input type="hidden" name="attribute_group_id" value="0" id="input-attribute-group-id">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>

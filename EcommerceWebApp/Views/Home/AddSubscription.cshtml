@@ -1,0 +1,179 @@
+﻿
+@{
+    ViewBag.Title = "AddSubscription";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="container-fluid">
+                    <div class="float-end">
+
+                        <div class="container">
+                            <div class="row align-items-center mb-3">
+                                <!-- Heading -->
+                                <div class="col">
+                                    <h1>Subscription Plans</h1>
+                                </div>
+
+                                <!-- Buttons -->
+                                <div class="col-auto">
+                                    <!-- Save button -->
+                                    <button type="submit" @*form="form-category"*@ class="btn btn-primary ms-2">
+                                        <i class="fas fa-save me-1"></i> Save
+                                    </button>
+                                    <!-- Back button -->
+                                    <a href="@Url.Action("subscription")" class="btn btn-outline-secondary">
+                                        <i class="fas fa-arrow-left me-1"></i> Go Back
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Breadcrumbs -->
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="@Url.Action("Index")">Home</a></li>
+                                <li class="breadcrumb-item"><a href="@Url.Action("subscription")">Subscription</a></li>
+                            </ol>
+                        </div>
+
+
+                        <!-- /.col -->
+                    </div><!-- /.row -->
+                </div><!-- /.container-fluid -->
+            </div>
+
+            <!-- /.content-header -->
+            <!-- Main content  write everythig inside this main content -->
+            <!-- main content start -->
+
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="container-fluid">
+                        <div class="card">
+                            <div class="card-header"><i class="fas fa-pencil-alt"></i> Add Subscription Plan</div>
+                            <div class="card-body">
+                                <form id="form-subscription-plan" action="https://demo.opencart.com/admin/index.php?route=catalog/subscription_plan|save&amp;user_token=4516d0f83e164ac423c47433b30be2ea" method="post" data-oc-toggle="ajax">
+                                    <div class="row mb-3 required">
+                                        <label class="col-sm-2 col-form-label">Subscription Plan Name</label>
+                                        <div class="col-sm-10">
+                                            <div class="input-group">
+                                                <div class="input-group-text"><img src="~/Content/admin/img/language.png" title="English"></div>
+                                                <input type="text" name="subscription_plan_description[1][name]" value="" placeholder="Subscription Plan Name" id="input-name-1" class="form-control">
+                                                <div id="error-name-1" class="invalid-feedback"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <fieldset>
+                                        <legend>Trial</legend>
+                                        <div class="row mb-3">
+                                            <label for="input-trial-price" class="col-sm-2 col-form-label">Trial Price</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="trial_price" value="0" placeholder="Trial Price" id="input-trial-price" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="input-trial-duration" class="col-sm-2 col-form-label">Trial Duration</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="trial_duration" value="0" placeholder="Trial Duration" id="input-trial-duration" class="form-control">
+                                                <div class="form-text">The duration is the number of times the user will make a payment, set this to 0 if you want payments until they are cancelled.</div>
+                                                <div id="error-trial-duration" class="invalid-feedback"></div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="input-trial-cycle" class="col-sm-2 col-form-label">Trial Cycle</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="trial_cycle" value="1" placeholder="Trial Cycle" id="input-trial-cycle" class="form-control">
+                                                <div class="form-text">Subscription amounts are calculated by the frequency and cycles.</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="input-trial-frequency" class="col-sm-2 col-form-label">Trial Frequency</label>
+                                            <div class="col-sm-10">
+                                                <select name="trial_frequency" id="input-trial-frequency" class="form-select">
+                                                    <option value="day">Day</option>
+                                                    <option value="week">Week</option>
+                                                    <option value="semi_month">Semi Month</option>
+                                                    <option value="month">Month</option>
+                                                    <option value="year">Year</option>
+                                                </select>
+                                                <div class="form-text">If you use a frequency of "week" and a cycle of "2", then the user will be billed every 2 weeks.</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="input-trial-status" class="col-sm-2 col-form-label">Trial Status</label>
+                                            <div class="col-sm-10">
+                                                <select name="trial_status" id="input-trial-status" class="form-select">
+                                                    <option value="1">Enabled</option>
+                                                    <option value="0" selected="selected">Disabled</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Subscription</legend>
+                                        <div class="row mb-3">
+                                            <label for="input-price" class="col-sm-2 col-form-label">Price</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="price" value="0" placeholder="Price" id="input-price" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="input-duration" class="col-sm-2 col-form-label">Duration</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="duration" value="0" placeholder="Duration" id="input-duration" class="form-control">
+                                                <div class="form-text">The duration is the number of times the user will make a payment, set this to 0 if you want payments until they are cancelled.</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="input-cycle" class="col-sm-2 col-form-label">Cycle</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="cycle" value="1" placeholder="Cycle" id="input-cycle" class="form-control">
+                                                <div class="form-text">Subscription amounts are calculated by the frequency and cycles.</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="input-frequency" class="col-sm-2 col-form-label">Frequency</label>
+                                            <div class="col-sm-10">
+                                                <select name="frequency" id="input-frequency" class="form-select">
+                                                    <option value="day">Day</option>
+                                                    <option value="week">Week</option>
+                                                    <option value="semi_month">Semi Month</option>
+                                                    <option value="month">Month</option>
+                                                    <option value="year">Year</option>
+                                                </select>
+                                                <div class="form-text">If you use a frequency of "week" and a cycle of "2", then the user will be billed every 2 weeks.</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="input-status" class="col-sm-2 col-form-label">Status</label>
+                                            <div class="col-sm-10">
+                                                <select name="status" id="input-status" class="form-select">
+                                                    <option value="1">Enabled</option>
+                                                    <option value="0" selected="selected">Disabled</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label for="input-sort-order" class="col-sm-2 col-form-label">Sort Order</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" name="sort_order" value="0" placeholder="Sort Order" id="input-sort-order" class="form-control">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <input type="hidden" name="subscription_plan_id" value="0" id="input-subscription-plan-id">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+
+
+        <!-- main content end -->
+        <!-- /. main content  ended-->
+    </div>
+    <!-- /.content-wrapper ends here  -->
+
+

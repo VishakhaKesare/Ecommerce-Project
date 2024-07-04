@@ -1,0 +1,1520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EcommerceModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ecom_address">
+    <Key>
+      <PropertyRef Name="address_id" />
+    </Key>
+    <Property Name="address_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="company" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="address_1" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="address_2" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="city" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="postcode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="country_id" Type="int" Nullable="false" />
+    <Property Name="zone_id" Type="int" Nullable="false" />
+    <Property Name="custom_field" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_adminUser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_banner">
+    <Key>
+      <PropertyRef Name="banner_id" />
+    </Key>
+    <Property Name="banner_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_banner_image">
+    <Key>
+      <PropertyRef Name="banner_image_id" />
+    </Key>
+    <Property Name="banner_image_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="banner_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="link" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_cart">
+    <Key>
+      <PropertyRef Name="cart_id" />
+    </Key>
+    <Property Name="cart_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="api_id" Type="int" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="session_id" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="recurring_id" Type="int" Nullable="false" />
+    <Property Name="option" Type="text" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="date_adde" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_category">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="255" />
+    <Property Name="parent_id" Type="int" Nullable="false" />
+    <Property Name="top" Type="tinyint" Nullable="false" />
+    <Property Name="column" Type="int" Nullable="false" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_category_description">
+    <Key>
+      <PropertyRef Name="categorydescription_id" />
+    </Key>
+    <Property Name="categorydescription_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="description" Type="text" Nullable="false" />
+    <Property Name="meta_title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="meta_description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="meta_keyword" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_category_filter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_category_filter">
+    <Key>
+      <PropertyRef Name="category_id" />
+      <PropertyRef Name="filter_id" />
+    </Key>
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="filter_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_country">
+    <Key>
+      <PropertyRef Name="country_id" />
+    </Key>
+    <Property Name="country_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="iso_code_2" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="iso_code_3" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="address_format" Type="text" Nullable="false" />
+    <Property Name="postcode_required" Type="tinyint" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_coupon">
+    <Key>
+      <PropertyRef Name="coupon_id" />
+    </Key>
+    <Property Name="coupon_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="type" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="discount" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="logged" Type="tinyint" Nullable="false" />
+    <Property Name="shipping" Type="tinyint" Nullable="false" />
+    <Property Name="total" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="date_start" Type="date" Nullable="false" />
+    <Property Name="date_end" Type="date" Nullable="false" />
+    <Property Name="uses_total" Type="int" Nullable="false" />
+    <Property Name="uses_customer" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_coupon_category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_coupon_category">
+    <Key>
+      <PropertyRef Name="coupon_id" />
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="coupon_id" Type="int" Nullable="false" />
+    <Property Name="category_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_coupon_history">
+    <Key>
+      <PropertyRef Name="coupon_history_id" />
+    </Key>
+    <Property Name="coupon_history_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="coupon_id" Type="int" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="amount" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_coupon_product">
+    <Key>
+      <PropertyRef Name="coupon_product_id" />
+    </Key>
+    <Property Name="coupon_product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="coupon_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_currency">
+    <Key>
+      <PropertyRef Name="currency_id" />
+    </Key>
+    <Property Name="currency_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="symbol_left" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="symbol_right" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="decimal_place" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="value" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_customer">
+    <Key>
+      <PropertyRef Name="customer_id" />
+    </Key>
+    <Property Name="customer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_group_id" Type="int" Nullable="false" />
+    <Property Name="store_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="96" Nullable="false" />
+    <Property Name="telephone" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="fax" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="salt" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="cart" Type="text" />
+    <Property Name="wishlist" Type="text" />
+    <Property Name="newsletter" Type="tinyint" Nullable="false" />
+    <Property Name="address_id" Type="int" Nullable="false" />
+    <Property Name="custom_field" Type="text" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+    <Property Name="safe" Type="tinyint" Nullable="false" />
+    <Property Name="token" Type="text" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_customer_ip">
+    <Key>
+      <PropertyRef Name="customer_ip_id" />
+    </Key>
+    <Property Name="customer_ip_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_customer_login">
+    <Key>
+      <PropertyRef Name="customer_login_id" />
+    </Key>
+    <Property Name="customer_login_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="96" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="total" Type="int" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_customer_reward">
+    <Key>
+      <PropertyRef Name="customer_reward_id" />
+    </Key>
+    <Property Name="customer_reward_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="description" Type="text" Nullable="false" />
+    <Property Name="points" Type="int" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_customer_transaction">
+    <Key>
+      <PropertyRef Name="customer_transaction_id" />
+    </Key>
+    <Property Name="customer_transaction_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="description" Type="text" Nullable="false" />
+    <Property Name="amount" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_customer_wishlist' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_customer_wishlist">
+    <Key>
+      <PropertyRef Name="customer_id" />
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="date_added" />
+    </Key>
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_filter">
+    <Key>
+      <PropertyRef Name="filter_id" />
+    </Key>
+    <Property Name="filter_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="filter_group_id" Type="int" Nullable="false" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_filter_description' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_filter_description">
+    <Key>
+      <PropertyRef Name="filter_id" />
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="filter_group_id" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="filter_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="filter_group_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_filter_group">
+    <Key>
+      <PropertyRef Name="filter_group_id" />
+    </Key>
+    <Property Name="filter_group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_filter_group_description' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_filter_group_description">
+    <Key>
+      <PropertyRef Name="filter_group_id" />
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="filter_group_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="64" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_language">
+    <Key>
+      <PropertyRef Name="language_id" />
+    </Key>
+    <Property Name="language_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="locale" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="directory" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_manufacturer">
+    <Key>
+      <PropertyRef Name="manufacturer_id" />
+    </Key>
+    <Property Name="manufacturer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="255" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_manufacturer_to_store' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_manufacturer_to_store">
+    <Key>
+      <PropertyRef Name="manufacturer_id" />
+      <PropertyRef Name="store_id" />
+    </Key>
+    <Property Name="manufacturer_id" Type="int" Nullable="false" />
+    <Property Name="store_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_option">
+    <Key>
+      <PropertyRef Name="option_id" />
+    </Key>
+    <Property Name="option_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_option_description' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_option_description">
+    <Key>
+      <PropertyRef Name="option_id" />
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="option_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_option_value">
+    <Key>
+      <PropertyRef Name="option_value_id" />
+    </Key>
+    <Property Name="option_value_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="option_id" Type="int" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_option_value_description' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_option_value_description">
+    <Key>
+      <PropertyRef Name="option_value_id" />
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="option_id" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="option_value_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="option_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="invoice_no" Type="int" Nullable="false" />
+    <Property Name="invoice_prefix" Type="varchar" MaxLength="26" Nullable="false" />
+    <Property Name="store_id" Type="int" Nullable="false" />
+    <Property Name="store_name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="store_url" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="customer_id" Type="int" Nullable="false" />
+    <Property Name="customer_group_id" Type="int" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="96" Nullable="false" />
+    <Property Name="telephone" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="fax" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="custom_field" Type="text" Nullable="false" />
+    <Property Name="payment_firstname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="payment_lastname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="payment_company" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="payment_address_1" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="payment_address_2" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="payment_city" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="payment_postcode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="payment_country" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="payment_country_id" Type="int" Nullable="false" />
+    <Property Name="payment_zone" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="payment_zone_id" Type="int" Nullable="false" />
+    <Property Name="payment_address_format" Type="text" Nullable="false" />
+    <Property Name="payment_custom_field" Type="text" Nullable="false" />
+    <Property Name="payment_method" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="payment_code" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="shipping_firstname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="shipping_lastname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="shipping_company" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="shipping_address_1" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="shipping_address_2" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="shipping_city" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="shipping_postcode" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="shipping_country" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="shipping_country_id" Type="int" Nullable="false" />
+    <Property Name="shipping_zone" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="shipping_zone_id" Type="int" Nullable="false" />
+    <Property Name="shipping_address_format" Type="text" Nullable="false" />
+    <Property Name="shipping_custom_field" Type="text" Nullable="false" />
+    <Property Name="shipping_method" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="shipping_code" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="comment" Type="text" Nullable="false" />
+    <Property Name="total" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="order_status_id" Type="int" Nullable="false" />
+    <Property Name="affiliate_id" Type="int" Nullable="false" />
+    <Property Name="commission" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="marketing_id" Type="int" Nullable="false" />
+    <Property Name="tracking" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="currency_id" Type="int" Nullable="false" />
+    <Property Name="currency_code" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="currency_value" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="forwarded_ip" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="user_agent" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="accept_language" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order_history">
+    <Key>
+      <PropertyRef Name="order_history_id" />
+    </Key>
+    <Property Name="order_history_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="order_status_id" Type="int" Nullable="false" />
+    <Property Name="notify" Type="tinyint" Nullable="false" />
+    <Property Name="comment" Type="text" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order_option">
+    <Key>
+      <PropertyRef Name="order_option_id" />
+    </Key>
+    <Property Name="order_option_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="order_product_id" Type="int" Nullable="false" />
+    <Property Name="product_option_id" Type="int" Nullable="false" />
+    <Property Name="product_option_value_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="value" Type="text" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order_product">
+    <Key>
+      <PropertyRef Name="order_product_id" />
+    </Key>
+    <Property Name="order_product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="price" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="total" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="tax" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="reward" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order_recurring">
+    <Key>
+      <PropertyRef Name="order_recurring_id" />
+    </Key>
+    <Property Name="order_recurring_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="reference" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="product_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="product_quantity" Type="int" Nullable="false" />
+    <Property Name="recurring_id" Type="int" Nullable="false" />
+    <Property Name="recurring_name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="recurring_description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="recurring_frequency" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="recurring_cycle" Type="smallint" Nullable="false" />
+    <Property Name="recurring_duration" Type="smallint" Nullable="false" />
+    <Property Name="recurring_price" Type="decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="trial" Type="tinyint" Nullable="false" />
+    <Property Name="trial_frequency" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="trial_cycle" Type="smallint" Nullable="false" />
+    <Property Name="trial_duration" Type="smallint" Nullable="false" />
+    <Property Name="trial_price" Type="decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order_recurring_transaction">
+    <Key>
+      <PropertyRef Name="order_recurring_transaction_id" />
+    </Key>
+    <Property Name="order_recurring_transaction_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_recurring_id" Type="int" Nullable="false" />
+    <Property Name="reference" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="amount" Type="decimal" Precision="10" Scale="4" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order_shipment">
+    <Key>
+      <PropertyRef Name="order_shipment_id" />
+    </Key>
+    <Property Name="order_shipment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+    <Property Name="shipping_courier_id" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="tracking_number" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order_status">
+    <Key>
+      <PropertyRef Name="order_status_id" />
+    </Key>
+    <Property Name="order_status_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order_total">
+    <Key>
+      <PropertyRef Name="order_total_id" />
+    </Key>
+    <Property Name="order_total_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="value" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_order_voucher">
+    <Key>
+      <PropertyRef Name="order_voucher_id" />
+    </Key>
+    <Property Name="order_voucher_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="int" Nullable="false" />
+    <Property Name="voucher_id" Type="int" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="from_name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="from_email" Type="varchar" MaxLength="96" Nullable="false" />
+    <Property Name="to_name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="to_email" Type="varchar" MaxLength="96" Nullable="false" />
+    <Property Name="voucher_theme_id" Type="int" Nullable="false" />
+    <Property Name="message" Type="text" Nullable="false" />
+    <Property Name="amount" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="model" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="sku" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="upc" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="ean" Type="varchar" MaxLength="14" Nullable="false" />
+    <Property Name="jan" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="isbn" Type="varchar" MaxLength="17" Nullable="false" />
+    <Property Name="mpn" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="location" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="stock_status_id" Type="int" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="255" />
+    <Property Name="manufacturer_id" Type="int" Nullable="false" />
+    <Property Name="shipping" Type="tinyint" Nullable="false" />
+    <Property Name="price" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="points" Type="int" Nullable="false" />
+    <Property Name="tax_class_id" Type="int" Nullable="false" />
+    <Property Name="date_available" Type="date" Nullable="false" />
+    <Property Name="weight" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="weight_class_id" Type="int" Nullable="false" />
+    <Property Name="length" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="width" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="height" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="length_class_id" Type="int" Nullable="false" />
+    <Property Name="subtract" Type="tinyint" Nullable="false" />
+    <Property Name="minimum" Type="int" Nullable="false" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+    <Property Name="viewed" Type="int" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product_attribute">
+    <Key>
+      <PropertyRef Name="attribute_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="attribute_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="text" Type="text" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_product_description' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_product_description">
+    <Key>
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="name" />
+      <PropertyRef Name="description" />
+      <PropertyRef Name="tag" />
+      <PropertyRef Name="meta_title" />
+      <PropertyRef Name="meta_description" />
+      <PropertyRef Name="meta_keyword" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="description" Type="text" Nullable="false" />
+    <Property Name="tag" Type="text" Nullable="false" />
+    <Property Name="meta_title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="meta_description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="meta_keyword" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product_discount">
+    <Key>
+      <PropertyRef Name="product_discount_id" />
+    </Key>
+    <Property Name="product_discount_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="customer_group_id" Type="int" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="priority" Type="int" Nullable="false" />
+    <Property Name="price" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="date_start" Type="date" Nullable="false" />
+    <Property Name="date_end" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_product_filter' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_product_filter">
+    <Key>
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="filter_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="filter_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product_image">
+    <Key>
+      <PropertyRef Name="product_image_id" />
+    </Key>
+    <Property Name="product_image_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="255" />
+    <Property Name="sort_order" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product_option">
+    <Key>
+      <PropertyRef Name="product_option_id" />
+    </Key>
+    <Property Name="product_option_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="option_id" Type="int" Nullable="false" />
+    <Property Name="value" Type="text" Nullable="false" />
+    <Property Name="required" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product_option_value">
+    <Key>
+      <PropertyRef Name="product_option_value_id" />
+    </Key>
+    <Property Name="product_option_value_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_option_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="option_id" Type="int" Nullable="false" />
+    <Property Name="option_value_id" Type="int" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="subtract" Type="tinyint" Nullable="false" />
+    <Property Name="price" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="price_prefix" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="points" Type="int" Nullable="false" />
+    <Property Name="points_prefix" Type="varchar" MaxLength="1" Nullable="false" />
+    <Property Name="weight" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+    <Property Name="weight_prefix" Type="varchar" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_product_recurring' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_product_recurring">
+    <Key>
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="recurring_id" />
+      <PropertyRef Name="customer_group_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="recurring_id" Type="int" Nullable="false" />
+    <Property Name="customer_group_id" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_product_related' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_product_related">
+    <Key>
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="related_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="related_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product_reward">
+    <Key>
+      <PropertyRef Name="product_reward_id" />
+    </Key>
+    <Property Name="product_reward_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="customer_group_id" Type="int" Nullable="false" />
+    <Property Name="points" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product_special">
+    <Key>
+      <PropertyRef Name="product_special_id" />
+    </Key>
+    <Property Name="product_special_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="customer_group_id" Type="int" Nullable="false" />
+    <Property Name="priority" Type="int" Nullable="false" />
+    <Property Name="price" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="date_start" Type="date" Nullable="false" />
+    <Property Name="date_end" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_product_to_category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_product_to_category">
+    <Key>
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="category_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product_to_download">
+    <Key>
+      <PropertyRef Name="download_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="download_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_product_to_layout">
+    <Key>
+      <PropertyRef Name="layout_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="store_id" Type="int" Nullable="false" />
+    <Property Name="layout_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_product_to_store' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_product_to_store">
+    <Key>
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="store_id" />
+    </Key>
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="store_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_setting">
+    <Key>
+      <PropertyRef Name="setting_id" />
+    </Key>
+    <Property Name="setting_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_id" Type="int" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="key" Type="varchar" MaxLength="128" Nullable="false" />
+    <Property Name="value" Type="text" Nullable="false" />
+    <Property Name="serialized" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_store">
+    <Key>
+      <PropertyRef Name="store_id" />
+    </Key>
+    <Property Name="store_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="url" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="ssl" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_tax_class">
+    <Key>
+      <PropertyRef Name="tax_class_id" />
+    </Key>
+    <Property Name="tax_class_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_tax_rate">
+    <Key>
+      <PropertyRef Name="tax_rate_id" />
+    </Key>
+    <Property Name="tax_rate_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="geo_zone_id" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="rate" Type="decimal" Precision="15" Scale="4" Nullable="false" />
+    <Property Name="type" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_tax_rate_to_customer_group">
+    <Key>
+      <PropertyRef Name="customer_group_id" />
+    </Key>
+    <Property Name="tax_rate_id" Type="int" Nullable="false" />
+    <Property Name="customer_group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_tax_rule">
+    <Key>
+      <PropertyRef Name="tax_rule_id" />
+    </Key>
+    <Property Name="tax_rule_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tax_class_id" Type="int" Nullable="false" />
+    <Property Name="tax_rate_id" Type="int" Nullable="false" />
+    <Property Name="based" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="priority" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_tt_blog">
+    <Key>
+      <PropertyRef Name="tt_blog_id" />
+    </Key>
+    <Property Name="tt_blog_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="module_id" Type="int" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="255" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+    <Property Name="date_modified" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_tt_blog_comment">
+    <Key>
+      <PropertyRef Name="tt_blog_comment_id" />
+    </Key>
+    <Property Name="tt_blog_comment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tt_blog_id" Type="int" Nullable="false" />
+    <Property Name="approved" Type="int" Nullable="false" />
+    <Property Name="author" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="96" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_tt_blog_comment_description' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_tt_blog_comment_description">
+    <Key>
+      <PropertyRef Name="tt_blog_comment_id" />
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="comment" />
+    </Key>
+    <Property Name="tt_blog_comment_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="comment" Type="text" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_tt_blog_description' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_tt_blog_description">
+    <Key>
+      <PropertyRef Name="tt_blog_id" />
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="description" />
+    </Key>
+    <Property Name="tt_blog_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="description" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_group_id" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="salt" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="96" Nullable="false" />
+    <Property Name="image" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="code" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="ip" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+    <Property Name="date_added" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_user_group">
+    <Key>
+      <PropertyRef Name="user_group_id" />
+    </Key>
+    <Property Name="user_group_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="64" Nullable="false" />
+    <Property Name="permission" Type="text" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ecom_weight_class">
+    <Key>
+      <PropertyRef Name="weight_class_id" />
+    </Key>
+    <Property Name="weight_class_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="value" Type="decimal" Precision="15" Scale="8" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Ecommerce.dbo.ecom_weight_class_description' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ecom_weight_class_description">
+    <Key>
+      <PropertyRef Name="weight_class_id" />
+      <PropertyRef Name="language_id" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="unit" />
+    </Key>
+    <Property Name="weight_class_id" Type="int" Nullable="false" />
+    <Property Name="language_id" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="unit" Type="varchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_ecom_address_ecom_country">
+    <End Role="ecom_country" Type="Self.ecom_country" Multiplicity="1" />
+    <End Role="ecom_address" Type="Self.ecom_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_country">
+        <PropertyRef Name="country_id" />
+      </Principal>
+      <Dependent Role="ecom_address">
+        <PropertyRef Name="country_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_address_ecom_customer">
+    <End Role="ecom_customer" Type="Self.ecom_customer" Multiplicity="1" />
+    <End Role="ecom_address" Type="Self.ecom_address" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="ecom_address">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_banner_image_ecom_banner">
+    <End Role="ecom_banner" Type="Self.ecom_banner" Multiplicity="1" />
+    <End Role="ecom_banner_image" Type="Self.ecom_banner_image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_banner">
+        <PropertyRef Name="banner_id" />
+      </Principal>
+      <Dependent Role="ecom_banner_image">
+        <PropertyRef Name="banner_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_cart_ecom_customer">
+    <End Role="ecom_customer" Type="Self.ecom_customer" Multiplicity="1" />
+    <End Role="ecom_cart" Type="Self.ecom_cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="ecom_cart">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_customer_ecom_address">
+    <End Role="ecom_address" Type="Self.ecom_address" Multiplicity="1" />
+    <End Role="ecom_customer" Type="Self.ecom_customer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_address">
+        <PropertyRef Name="address_id" />
+      </Principal>
+      <Dependent Role="ecom_customer">
+        <PropertyRef Name="address_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_customer_ip_ecom_customer">
+    <End Role="ecom_customer" Type="Self.ecom_customer" Multiplicity="1" />
+    <End Role="ecom_customer_ip" Type="Self.ecom_customer_ip" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="ecom_customer_ip">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_manufacturer_to_store_ecom_manufacturer">
+    <End Role="ecom_manufacturer" Type="Self.ecom_manufacturer" Multiplicity="1" />
+    <End Role="ecom_manufacturer_to_store" Type="Self.ecom_manufacturer_to_store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_manufacturer">
+        <PropertyRef Name="manufacturer_id" />
+      </Principal>
+      <Dependent Role="ecom_manufacturer_to_store">
+        <PropertyRef Name="manufacturer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_option_value_ecom_option">
+    <End Role="ecom_option" Type="Self.ecom_option" Multiplicity="1" />
+    <End Role="ecom_option_value" Type="Self.ecom_option_value" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_option">
+        <PropertyRef Name="option_id" />
+      </Principal>
+      <Dependent Role="ecom_option_value">
+        <PropertyRef Name="option_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_order_ecom_customer">
+    <End Role="ecom_customer" Type="Self.ecom_customer" Multiplicity="1" />
+    <End Role="ecom_order" Type="Self.ecom_order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_customer">
+        <PropertyRef Name="customer_id" />
+      </Principal>
+      <Dependent Role="ecom_order">
+        <PropertyRef Name="customer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_order_history_ecom_order">
+    <End Role="ecom_order" Type="Self.ecom_order" Multiplicity="1" />
+    <End Role="ecom_order_history" Type="Self.ecom_order_history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_order">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="ecom_order_history">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_order_product_ecom_order">
+    <End Role="ecom_order" Type="Self.ecom_order" Multiplicity="1" />
+    <End Role="ecom_order_product" Type="Self.ecom_order_product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_order">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="ecom_order_product">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_order_total_ecom_order">
+    <End Role="ecom_order" Type="Self.ecom_order" Multiplicity="1" />
+    <End Role="ecom_order_total" Type="Self.ecom_order_total" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_order">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="ecom_order_total">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_order_voucher_ecom_order">
+    <End Role="ecom_order" Type="Self.ecom_order" Multiplicity="1" />
+    <End Role="ecom_order_voucher" Type="Self.ecom_order_voucher" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_order">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="ecom_order_voucher">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_attribute_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_attribute" Type="Self.ecom_product_attribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_attribute">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_description_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_description" Type="Self.ecom_product_description" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_description">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_discount_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_discount" Type="Self.ecom_product_discount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_discount">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_ecom_manufacturer">
+    <End Role="ecom_manufacturer" Type="Self.ecom_manufacturer" Multiplicity="1" />
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_manufacturer">
+        <PropertyRef Name="manufacturer_id" />
+      </Principal>
+      <Dependent Role="ecom_product">
+        <PropertyRef Name="manufacturer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_image_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_image" Type="Self.ecom_product_image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_image">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_option_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_option" Type="Self.ecom_product_option" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_option">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_related_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_related" Type="Self.ecom_product_related" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_related">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_reward_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_reward" Type="Self.ecom_product_reward" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_reward">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_special_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_special" Type="Self.ecom_product_special" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_special">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_to_category_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_to_category" Type="Self.ecom_product_to_category" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_to_category">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_to_layout_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_to_layout" Type="Self.ecom_product_to_layout" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_to_layout">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_product_to_store_ecom_product">
+    <End Role="ecom_product" Type="Self.ecom_product" Multiplicity="1" />
+    <End Role="ecom_product_to_store" Type="Self.ecom_product_to_store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="ecom_product_to_store">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ecom_user_ecom_user_group">
+    <End Role="ecom_user_group" Type="Self.ecom_user_group" Multiplicity="1" />
+    <End Role="ecom_user" Type="Self.ecom_user" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ecom_user_group">
+        <PropertyRef Name="user_group_id" />
+      </Principal>
+      <Dependent Role="ecom_user">
+        <PropertyRef Name="user_group_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EcommerceModel1StoreContainer">
+    <EntitySet Name="ecom_address" EntityType="Self.ecom_address" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_adminUser" EntityType="Self.ecom_adminUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_banner" EntityType="Self.ecom_banner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_banner_image" EntityType="Self.ecom_banner_image" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_cart" EntityType="Self.ecom_cart" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_category" EntityType="Self.ecom_category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_category_description" EntityType="Self.ecom_category_description" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_country" EntityType="Self.ecom_country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_coupon" EntityType="Self.ecom_coupon" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_coupon_history" EntityType="Self.ecom_coupon_history" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_coupon_product" EntityType="Self.ecom_coupon_product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_currency" EntityType="Self.ecom_currency" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_customer" EntityType="Self.ecom_customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_customer_ip" EntityType="Self.ecom_customer_ip" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_customer_login" EntityType="Self.ecom_customer_login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_customer_reward" EntityType="Self.ecom_customer_reward" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_customer_transaction" EntityType="Self.ecom_customer_transaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_filter" EntityType="Self.ecom_filter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_filter_group" EntityType="Self.ecom_filter_group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_language" EntityType="Self.ecom_language" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_manufacturer" EntityType="Self.ecom_manufacturer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_option" EntityType="Self.ecom_option" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_option_value" EntityType="Self.ecom_option_value" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order" EntityType="Self.ecom_order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order_history" EntityType="Self.ecom_order_history" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order_option" EntityType="Self.ecom_order_option" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order_product" EntityType="Self.ecom_order_product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order_recurring" EntityType="Self.ecom_order_recurring" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order_recurring_transaction" EntityType="Self.ecom_order_recurring_transaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order_shipment" EntityType="Self.ecom_order_shipment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order_status" EntityType="Self.ecom_order_status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order_total" EntityType="Self.ecom_order_total" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_order_voucher" EntityType="Self.ecom_order_voucher" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product" EntityType="Self.ecom_product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product_attribute" EntityType="Self.ecom_product_attribute" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product_discount" EntityType="Self.ecom_product_discount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product_image" EntityType="Self.ecom_product_image" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product_option" EntityType="Self.ecom_product_option" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product_option_value" EntityType="Self.ecom_product_option_value" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product_reward" EntityType="Self.ecom_product_reward" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product_special" EntityType="Self.ecom_product_special" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product_to_download" EntityType="Self.ecom_product_to_download" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_product_to_layout" EntityType="Self.ecom_product_to_layout" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_setting" EntityType="Self.ecom_setting" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_store" EntityType="Self.ecom_store" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_tax_class" EntityType="Self.ecom_tax_class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_tax_rate" EntityType="Self.ecom_tax_rate" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_tax_rate_to_customer_group" EntityType="Self.ecom_tax_rate_to_customer_group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_tax_rule" EntityType="Self.ecom_tax_rule" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_tt_blog" EntityType="Self.ecom_tt_blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_tt_blog_comment" EntityType="Self.ecom_tt_blog_comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_user" EntityType="Self.ecom_user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_user_group" EntityType="Self.ecom_user_group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_weight_class" EntityType="Self.ecom_weight_class" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ecom_category_filter" EntityType="Self.ecom_category_filter" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_category_filter].[category_id] AS [category_id], 
+    [ecom_category_filter].[filter_id] AS [filter_id]
+    FROM [dbo].[ecom_category_filter] AS [ecom_category_filter]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_coupon_category" EntityType="Self.ecom_coupon_category" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_coupon_category].[coupon_id] AS [coupon_id], 
+    [ecom_coupon_category].[category_id] AS [category_id]
+    FROM [dbo].[ecom_coupon_category] AS [ecom_coupon_category]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_customer_wishlist" EntityType="Self.ecom_customer_wishlist" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_customer_wishlist].[customer_id] AS [customer_id], 
+    [ecom_customer_wishlist].[product_id] AS [product_id], 
+    [ecom_customer_wishlist].[date_added] AS [date_added]
+    FROM [dbo].[ecom_customer_wishlist] AS [ecom_customer_wishlist]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_filter_description" EntityType="Self.ecom_filter_description" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_filter_description].[filter_id] AS [filter_id], 
+    [ecom_filter_description].[language_id] AS [language_id], 
+    [ecom_filter_description].[filter_group_id] AS [filter_group_id], 
+    [ecom_filter_description].[name] AS [name]
+    FROM [dbo].[ecom_filter_description] AS [ecom_filter_description]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_filter_group_description" EntityType="Self.ecom_filter_group_description" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_filter_group_description].[filter_group_id] AS [filter_group_id], 
+    [ecom_filter_group_description].[language_id] AS [language_id], 
+    [ecom_filter_group_description].[name] AS [name]
+    FROM [dbo].[ecom_filter_group_description] AS [ecom_filter_group_description]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_manufacturer_to_store" EntityType="Self.ecom_manufacturer_to_store" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_manufacturer_to_store].[manufacturer_id] AS [manufacturer_id], 
+    [ecom_manufacturer_to_store].[store_id] AS [store_id]
+    FROM [dbo].[ecom_manufacturer_to_store] AS [ecom_manufacturer_to_store]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_option_description" EntityType="Self.ecom_option_description" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_option_description].[option_id] AS [option_id], 
+    [ecom_option_description].[language_id] AS [language_id], 
+    [ecom_option_description].[name] AS [name]
+    FROM [dbo].[ecom_option_description] AS [ecom_option_description]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_option_value_description" EntityType="Self.ecom_option_value_description" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_option_value_description].[option_value_id] AS [option_value_id], 
+    [ecom_option_value_description].[language_id] AS [language_id], 
+    [ecom_option_value_description].[option_id] AS [option_id], 
+    [ecom_option_value_description].[name] AS [name]
+    FROM [dbo].[ecom_option_value_description] AS [ecom_option_value_description]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_product_description" EntityType="Self.ecom_product_description" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_product_description].[product_id] AS [product_id], 
+    [ecom_product_description].[language_id] AS [language_id], 
+    [ecom_product_description].[name] AS [name], 
+    [ecom_product_description].[description] AS [description], 
+    [ecom_product_description].[tag] AS [tag], 
+    [ecom_product_description].[meta_title] AS [meta_title], 
+    [ecom_product_description].[meta_description] AS [meta_description], 
+    [ecom_product_description].[meta_keyword] AS [meta_keyword]
+    FROM [dbo].[ecom_product_description] AS [ecom_product_description]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_product_filter" EntityType="Self.ecom_product_filter" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_product_filter].[product_id] AS [product_id], 
+    [ecom_product_filter].[filter_id] AS [filter_id]
+    FROM [dbo].[ecom_product_filter] AS [ecom_product_filter]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_product_recurring" EntityType="Self.ecom_product_recurring" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_product_recurring].[product_id] AS [product_id], 
+    [ecom_product_recurring].[recurring_id] AS [recurring_id], 
+    [ecom_product_recurring].[customer_group_id] AS [customer_group_id]
+    FROM [dbo].[ecom_product_recurring] AS [ecom_product_recurring]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_product_related" EntityType="Self.ecom_product_related" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_product_related].[product_id] AS [product_id], 
+    [ecom_product_related].[related_id] AS [related_id]
+    FROM [dbo].[ecom_product_related] AS [ecom_product_related]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_product_to_category" EntityType="Self.ecom_product_to_category" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_product_to_category].[product_id] AS [product_id], 
+    [ecom_product_to_category].[category_id] AS [category_id]
+    FROM [dbo].[ecom_product_to_category] AS [ecom_product_to_category]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_product_to_store" EntityType="Self.ecom_product_to_store" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_product_to_store].[product_id] AS [product_id], 
+    [ecom_product_to_store].[store_id] AS [store_id]
+    FROM [dbo].[ecom_product_to_store] AS [ecom_product_to_store]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_tt_blog_comment_description" EntityType="Self.ecom_tt_blog_comment_description" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_tt_blog_comment_description].[tt_blog_comment_id] AS [tt_blog_comment_id], 
+    [ecom_tt_blog_comment_description].[language_id] AS [language_id], 
+    [ecom_tt_blog_comment_description].[comment] AS [comment]
+    FROM [dbo].[ecom_tt_blog_comment_description] AS [ecom_tt_blog_comment_description]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_tt_blog_description" EntityType="Self.ecom_tt_blog_description" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_tt_blog_description].[tt_blog_id] AS [tt_blog_id], 
+    [ecom_tt_blog_description].[language_id] AS [language_id], 
+    [ecom_tt_blog_description].[title] AS [title], 
+    [ecom_tt_blog_description].[description] AS [description]
+    FROM [dbo].[ecom_tt_blog_description] AS [ecom_tt_blog_description]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ecom_weight_class_description" EntityType="Self.ecom_weight_class_description" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ecom_weight_class_description].[weight_class_id] AS [weight_class_id], 
+    [ecom_weight_class_description].[language_id] AS [language_id], 
+    [ecom_weight_class_description].[title] AS [title], 
+    [ecom_weight_class_description].[unit] AS [unit]
+    FROM [dbo].[ecom_weight_class_description] AS [ecom_weight_class_description]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ecom_address_ecom_country" Association="Self.FK_ecom_address_ecom_country">
+      <End Role="ecom_country" EntitySet="ecom_country" />
+      <End Role="ecom_address" EntitySet="ecom_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_address_ecom_customer" Association="Self.FK_ecom_address_ecom_customer">
+      <End Role="ecom_customer" EntitySet="ecom_customer" />
+      <End Role="ecom_address" EntitySet="ecom_address" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_banner_image_ecom_banner" Association="Self.FK_ecom_banner_image_ecom_banner">
+      <End Role="ecom_banner" EntitySet="ecom_banner" />
+      <End Role="ecom_banner_image" EntitySet="ecom_banner_image" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_cart_ecom_customer" Association="Self.FK_ecom_cart_ecom_customer">
+      <End Role="ecom_customer" EntitySet="ecom_customer" />
+      <End Role="ecom_cart" EntitySet="ecom_cart" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_customer_ecom_address" Association="Self.FK_ecom_customer_ecom_address">
+      <End Role="ecom_address" EntitySet="ecom_address" />
+      <End Role="ecom_customer" EntitySet="ecom_customer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_customer_ip_ecom_customer" Association="Self.FK_ecom_customer_ip_ecom_customer">
+      <End Role="ecom_customer" EntitySet="ecom_customer" />
+      <End Role="ecom_customer_ip" EntitySet="ecom_customer_ip" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_manufacturer_to_store_ecom_manufacturer" Association="Self.FK_ecom_manufacturer_to_store_ecom_manufacturer">
+      <End Role="ecom_manufacturer" EntitySet="ecom_manufacturer" />
+      <End Role="ecom_manufacturer_to_store" EntitySet="ecom_manufacturer_to_store" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_option_value_ecom_option" Association="Self.FK_ecom_option_value_ecom_option">
+      <End Role="ecom_option" EntitySet="ecom_option" />
+      <End Role="ecom_option_value" EntitySet="ecom_option_value" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_order_ecom_customer" Association="Self.FK_ecom_order_ecom_customer">
+      <End Role="ecom_customer" EntitySet="ecom_customer" />
+      <End Role="ecom_order" EntitySet="ecom_order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_order_history_ecom_order" Association="Self.FK_ecom_order_history_ecom_order">
+      <End Role="ecom_order" EntitySet="ecom_order" />
+      <End Role="ecom_order_history" EntitySet="ecom_order_history" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_order_product_ecom_order" Association="Self.FK_ecom_order_product_ecom_order">
+      <End Role="ecom_order" EntitySet="ecom_order" />
+      <End Role="ecom_order_product" EntitySet="ecom_order_product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_order_total_ecom_order" Association="Self.FK_ecom_order_total_ecom_order">
+      <End Role="ecom_order" EntitySet="ecom_order" />
+      <End Role="ecom_order_total" EntitySet="ecom_order_total" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_order_voucher_ecom_order" Association="Self.FK_ecom_order_voucher_ecom_order">
+      <End Role="ecom_order" EntitySet="ecom_order" />
+      <End Role="ecom_order_voucher" EntitySet="ecom_order_voucher" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_attribute_ecom_product" Association="Self.FK_ecom_product_attribute_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_attribute" EntitySet="ecom_product_attribute" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_description_ecom_product" Association="Self.FK_ecom_product_description_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_description" EntitySet="ecom_product_description" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_discount_ecom_product" Association="Self.FK_ecom_product_discount_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_discount" EntitySet="ecom_product_discount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_ecom_manufacturer" Association="Self.FK_ecom_product_ecom_manufacturer">
+      <End Role="ecom_manufacturer" EntitySet="ecom_manufacturer" />
+      <End Role="ecom_product" EntitySet="ecom_product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_image_ecom_product" Association="Self.FK_ecom_product_image_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_image" EntitySet="ecom_product_image" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_option_ecom_product" Association="Self.FK_ecom_product_option_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_option" EntitySet="ecom_product_option" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_related_ecom_product" Association="Self.FK_ecom_product_related_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_related" EntitySet="ecom_product_related" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_reward_ecom_product" Association="Self.FK_ecom_product_reward_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_reward" EntitySet="ecom_product_reward" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_special_ecom_product" Association="Self.FK_ecom_product_special_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_special" EntitySet="ecom_product_special" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_to_category_ecom_product" Association="Self.FK_ecom_product_to_category_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_to_category" EntitySet="ecom_product_to_category" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_to_layout_ecom_product" Association="Self.FK_ecom_product_to_layout_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_to_layout" EntitySet="ecom_product_to_layout" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_product_to_store_ecom_product" Association="Self.FK_ecom_product_to_store_ecom_product">
+      <End Role="ecom_product" EntitySet="ecom_product" />
+      <End Role="ecom_product_to_store" EntitySet="ecom_product_to_store" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ecom_user_ecom_user_group" Association="Self.FK_ecom_user_ecom_user_group">
+      <End Role="ecom_user_group" EntitySet="ecom_user_group" />
+      <End Role="ecom_user" EntitySet="ecom_user" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

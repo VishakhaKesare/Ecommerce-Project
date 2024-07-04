@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3f2411d3bfde455aa12ecf596cb93997" Name="Diagram1">
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_address" Width="1.5" PointX="10" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_adminUser" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_banner" Width="1.5" PointX="16.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_banner_image" Width="1.5" PointX="19" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_cart" Width="1.5" PointX="14.5" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_category" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_category_description" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_country" Width="1.5" PointX="7.75" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_coupon" Width="1.5" PointX="7.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_coupon_history" Width="1.5" PointX="7.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_coupon_product" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_currency" Width="1.5" PointX="9.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_customer" Width="1.5" PointX="12.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_customer_ip" Width="1.5" PointX="14.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_customer_login" Width="1.5" PointX="11.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_customer_reward" Width="1.5" PointX="11.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_customer_transaction" Width="1.5" PointX="18.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_filter" Width="1.5" PointX="18.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_filter_group" Width="1.5" PointX="18.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_language" Width="1.5" PointX="18.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_manufacturer" Width="1.5" PointX="0.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_option" Width="1.5" PointX="16.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_option_value" Width="1.5" PointX="19" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order" Width="1.5" PointX="14.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order_history" Width="1.5" PointX="16.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order_option" Width="1.5" PointX="11.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order_product" Width="1.5" PointX="16.75" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order_recurring" Width="1.5" PointX="20.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order_recurring_transaction" Width="1.5" PointX="7.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order_shipment" Width="1.5" PointX="20.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order_status" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order_total" Width="1.5" PointX="16.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_order_voucher" Width="1.5" PointX="16.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_attribute" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_discount" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_image" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_option" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_option_value" Width="1.5" PointX="18.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_reward" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_special" Width="1.5" PointX="5.25" PointY="17.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_to_download" Width="1.5" PointX="20.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_to_layout" Width="1.5" PointX="5.25" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_setting" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_store" Width="1.5" PointX="21.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_tax_class" Width="1.5" PointX="22.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_tax_rate" Width="1.5" PointX="22.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_tax_rate_to_customer_group" Width="1.5" PointX="22.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_tax_rule" Width="1.5" PointX="13.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_tt_blog" Width="1.5" PointX="15.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_tt_blog_comment" Width="1.5" PointX="22.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_user" Width="1.5" PointX="10" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_user_group" Width="1.5" PointX="7.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_weight_class" Width="1.5" PointX="22.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.sysdiagram" Width="1.5" PointX="20.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_category_filter" Width="1.5" PointX="22.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_coupon_category" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_customer_wishlist" Width="1.5" PointX="0.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_filter_description" Width="1.5" PointX="23.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_filter_group_description" Width="1.5" PointX="7.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_manufacturer_to_store" Width="1.5" PointX="3" PointY="33.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_option_description" Width="1.5" PointX="9.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_option_value_description" Width="1.5" PointX="24.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_description" Width="1.5" PointX="5.25" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_filter" Width="1.5" PointX="24.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_recurring" Width="1.5" PointX="24.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_related" Width="1.5" PointX="5.25" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_to_category" Width="1.5" PointX="5.25" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_product_to_store" Width="1.5" PointX="5.25" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_tt_blog_comment_description" Width="1.5" PointX="24.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_tt_blog_description" Width="1.5" PointX="24.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EcommerceModel1.ecom_weight_class_description" Width="1.5" PointX="24.75" PointY="21.75" IsExpanded="true" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_address_ecom_country" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_address_ecom_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_customer_ecom_address" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_banner_image_ecom_banner" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_cart_ecom_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_customer_ip_ecom_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_order_ecom_customer" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_manufacturer_to_store_ecom_manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_ecom_manufacturer" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_option_value_ecom_option" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_order_history_ecom_order" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_order_product_ecom_order" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_order_total_ecom_order" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_order_voucher_ecom_order" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_attribute_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_description_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_discount_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_image_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_option_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_related_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_reward_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_special_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_to_category_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_to_layout_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_product_to_store_ecom_product" ManuallyRouted="false" />
+        <AssociationConnector Association="EcommerceModel1.FK_ecom_user_ecom_user_group" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
